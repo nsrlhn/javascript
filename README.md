@@ -1,4 +1,4 @@
 # javascript
 Basic exersices of javascript
 
-All exersices are taken from exercism.io and completed by me.
+All exersices are taken from <a href='https://exercism.io'>exercism.io<a> and completed by me.
