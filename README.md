@@ -1,4 +1,3 @@
 # javascript
-Basic exersices of javascript
 
-All exersices are taken from <a href='https://exercism.io'>exercism.io<a> and completed by me.
+This repository includes solutions of javascript exercises from <a href='https://exercism.io'>exercism.io<a>
