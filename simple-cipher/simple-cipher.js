@@ -4,19 +4,38 @@
 //
 
 export class Cipher {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
+  constructor(key = "ddddddddddddddddddddddddddd") {
+    this._key = key;
   }
 
-  encode() {
-    throw new Error("Remove this statement and implement this function");
+  encode(str) {
+    var result = [];
+    for (var i = 0; i < str.length; i++) {
+      var k = this._key.charCodeAt(i%this._key.length)-97;
+      var num = (str.charCodeAt(i)+k-97)%26+97;
+      result.push(String.fromCharCode(num));
+    }
+    return result.join("");
   }
 
-  decode() {
-    throw new Error("Remove this statement and implement this function");
+  decode(str) {
+    var result = [];
+    for (var i = 0; i < str.length; i++) {
+      var k = this._key.charCodeAt(i%this._key.length)-97;
+      var num = str.charCodeAt(i)-k;
+      if (num < 97) {
+        num += 26;
+      }
+      result.push(String.fromCharCode(num));
+    }
+    return result.join("");
   }
 
   get key() {
-    throw new Error("Remove this statement and implement this function");
+    return this._key;
   }
+  set key(k){
+    this._key = k;
+  }
+
 }
